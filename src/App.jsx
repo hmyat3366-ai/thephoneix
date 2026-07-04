@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import html2canvas from 'html2canvas';
-import { ChefHat, Utensils, Wine, MonitorSmartphone, TrendingUp, ShieldCheck, MessageCircle, X, Download, MapPin, User, Calendar, Settings, Star, Award, LogOut, Clock, Check } from 'lucide-react';
+import { ChefHat, Utensils, Wine, MonitorSmartphone, TrendingUp, ShieldCheck, MessageCircle, X, Download, MapPin, User, Calendar, Settings, Star, Award, LogOut, Clock, Check, Menu } from 'lucide-react';
 import './index.css';
 
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [activeMenuTab, setActiveMenuTab] = useState('alacarte');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   // Booking State
   const [bookingForm, setBookingForm] = useState({ name: '', phone: '', date: '', time: '', pax: '', experience: '', requests: '' });
@@ -149,17 +150,37 @@ function App() {
 
   return (
     <div className="app-container" style={{paddingTop: '70px'}}>
-      {/* Navigation Bar */}
       <nav style={{position: 'fixed', top: 0, left: 0, width: '100%', background: 'rgba(10, 10, 10, 0.95)', borderBottom: '1px solid rgba(212,175,55,0.2)', padding: '1rem 2rem', zIndex: 1000, display: 'flex', justifyContent: 'space-between', alignItems: 'center', backdropFilter: 'blur(10px)'}}>
-        <div style={{fontFamily: 'var(--font-serif)', color: 'var(--gold-primary)', fontSize: '1.5rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.8rem', cursor: 'pointer'}} onClick={() => {setCurrentPage('home'); window.scrollTo(0,0);}}>
+        <div style={{fontFamily: 'var(--font-serif)', color: 'var(--gold-primary)', fontSize: '1.5rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.8rem', cursor: 'pointer', zIndex: 1001}} onClick={() => {setCurrentPage('home'); window.scrollTo(0,0); setIsMobileMenuOpen(false);}}>
           <img src={`${BASE}logo.png`} alt="The Phoenix Logo" style={{height: '35px', mixBlendMode: 'lighten', filter: 'brightness(1.5) contrast(1.2)', objectFit: 'contain'}} /> The Phoenix
         </div>
-        <div style={{display: 'flex', gap: '2rem'}}>
+        
+        {/* Desktop Menu */}
+        <div className="desktop-menu" style={{display: 'flex', gap: '2rem'}}>
           <button onClick={() => {setCurrentPage('home'); window.scrollTo(0,0);}} style={{background: 'none', border: 'none', color: currentPage === 'home' ? 'var(--gold-primary)' : '#fff', fontSize: '1rem', cursor: 'pointer', transition: 'color 0.3s ease'}}>Home</button>
           {currentPage === 'home' && <a href="#reservation" style={{color: '#fff', textDecoration: 'none', fontSize: '1rem', display: 'flex', alignItems: 'center', cursor: 'pointer', transition: 'color 0.3s ease'}} onMouseOver={(e)=>e.target.style.color='var(--gold-primary)'} onMouseOut={(e)=>e.target.style.color='#fff'}>Reservation</a>}
           <button onClick={() => {setCurrentPage('about'); window.scrollTo(0,0);}} style={{background: 'none', border: 'none', color: currentPage === 'about' ? 'var(--gold-primary)' : '#fff', fontSize: '1rem', cursor: 'pointer', transition: 'color 0.3s ease', display: 'flex', alignItems: 'center', gap: '0.5rem'}}><ShieldCheck size={16}/> About (Investor Portal)</button>
           <button onClick={() => {setCurrentPage('profile'); window.scrollTo(0,0);}} style={{background: customerUser ? 'var(--gold-primary)' : 'transparent', border: '1px solid var(--gold-primary)', color: customerUser ? '#000' : 'var(--gold-primary)', padding: '0.4rem 1rem', borderRadius: '30px', fontSize: '0.9rem', cursor: 'pointer', transition: 'all 0.3s ease', display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
             <User size={16}/> {customerUser ? customerUser.firstName : 'Sign In'}
+          </button>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={{background: 'none', border: 'none', color: 'var(--gold-primary)', cursor: 'pointer', zIndex: 1001}}>
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
+        {/* Mobile Menu Overlay */}
+        <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`} style={{
+          position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh', background: 'rgba(10,10,10,0.98)', 
+          display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '2rem',
+          transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(-100%)', transition: 'transform 0.4s ease-in-out', zIndex: 1000
+        }}>
+          <button onClick={() => {setCurrentPage('home'); setIsMobileMenuOpen(false); window.scrollTo(0,0);}} style={{background: 'none', border: 'none', color: currentPage === 'home' ? 'var(--gold-primary)' : '#fff', fontSize: '1.5rem', cursor: 'pointer', fontFamily: 'var(--font-serif)'}}>Home</button>
+          {currentPage === 'home' && <a href="#reservation" onClick={() => setIsMobileMenuOpen(false)} style={{color: '#fff', textDecoration: 'none', fontSize: '1.5rem', fontFamily: 'var(--font-serif)'}}>Reservation</a>}
+          <button onClick={() => {setCurrentPage('about'); setIsMobileMenuOpen(false); window.scrollTo(0,0);}} style={{background: 'none', border: 'none', color: currentPage === 'about' ? 'var(--gold-primary)' : '#fff', fontSize: '1.5rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'var(--font-serif)'}}><ShieldCheck size={24}/> About (Investor Portal)</button>
+          <button onClick={() => {setCurrentPage('profile'); setIsMobileMenuOpen(false); window.scrollTo(0,0);}} style={{background: customerUser ? 'var(--gold-primary)' : 'transparent', border: '1px solid var(--gold-primary)', color: customerUser ? '#000' : 'var(--gold-primary)', padding: '0.8rem 2rem', borderRadius: '30px', fontSize: '1.2rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'var(--font-serif)', marginTop: '1rem'}}>
+            <User size={20}/> {customerUser ? customerUser.firstName : 'Sign In'}
           </button>
         </div>
       </nav>

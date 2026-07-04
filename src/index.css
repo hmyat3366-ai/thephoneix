@@ -438,6 +438,14 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: block !important;
+  }
+  
   .grid-2, .grid-3 {
     grid-template-columns: 1fr;
   }
