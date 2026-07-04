@@ -436,6 +436,14 @@ footer {
   font-size: 0.9rem;
 }
 
+.mobile-menu-btn {
+  display: none !important;
+}
+
+.mobile-menu {
+  display: none !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .desktop-menu {
@@ -444,6 +452,10 @@ footer {
   
   .mobile-menu-btn {
     display: block !important;
+  }
+
+  .mobile-menu {
+    display: flex !important;
   }
   
   .grid-2, .grid-3 {
