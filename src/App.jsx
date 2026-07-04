@@ -133,17 +133,18 @@ function App() {
       });
     }
   };
+  const BASE = import.meta.env.BASE_URL;
   const images = {
-    hero: "/assets/hero_shwedagon_distant_view.png",
-    plating: "/assets/art_of_plating_1783002028019.png",
-    kitchen: "/assets/modern_commercial_kitchen_1783002039497.png",
-    glassware: "/assets/crystal_glassware_1783002054553.png",
-    chef: "/assets/executive_chef_1783002077005.png",
-    manager: "/assets/restaurant_manager_1783002087781.png",
-    pos: "/assets/pos_system_1783002100242.png",
-    bohLayout: "/assets/BOH Hifi.png",
-    fohLayout: "/assets/FOH Hifi.png",
-    fullLayout: "/assets/Full.png",
+    hero: `${BASE}assets/hero_shwedagon_distant_view.png`,
+    plating: `${BASE}assets/art_of_plating_1783002028019.png`,
+    kitchen: `${BASE}assets/modern_commercial_kitchen_1783002039497.png`,
+    glassware: `${BASE}assets/crystal_glassware_1783002054553.png`,
+    chef: `${BASE}assets/executive_chef_1783002077005.png`,
+    manager: `${BASE}assets/restaurant_manager_1783002087781.png`,
+    pos: `${BASE}assets/pos_system_1783002100242.png`,
+    bohLayout: `${BASE}assets/BOH Hifi.png`,
+    fohLayout: `${BASE}assets/FOH Hifi.png`,
+    fullLayout: `${BASE}assets/Full.png`,
   };
 
   return (
@@ -151,7 +152,7 @@ function App() {
       {/* Navigation Bar */}
       <nav style={{position: 'fixed', top: 0, left: 0, width: '100%', background: 'rgba(10, 10, 10, 0.95)', borderBottom: '1px solid rgba(212,175,55,0.2)', padding: '1rem 2rem', zIndex: 1000, display: 'flex', justifyContent: 'space-between', alignItems: 'center', backdropFilter: 'blur(10px)'}}>
         <div style={{fontFamily: 'var(--font-serif)', color: 'var(--gold-primary)', fontSize: '1.5rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.8rem', cursor: 'pointer'}} onClick={() => {setCurrentPage('home'); window.scrollTo(0,0);}}>
-          <img src="/logo.png" alt="The Phoenix Logo" style={{height: '35px', mixBlendMode: 'lighten', filter: 'brightness(1.5) contrast(1.2)', objectFit: 'contain'}} /> The Phoenix
+          <img src={`${BASE}logo.png`} alt="The Phoenix Logo" style={{height: '35px', mixBlendMode: 'lighten', filter: 'brightness(1.5) contrast(1.2)', objectFit: 'contain'}} /> The Phoenix
         </div>
         <div style={{display: 'flex', gap: '2rem'}}>
           <button onClick={() => {setCurrentPage('home'); window.scrollTo(0,0);}} style={{background: 'none', border: 'none', color: currentPage === 'home' ? 'var(--gold-primary)' : '#fff', fontSize: '1rem', cursor: 'pointer', transition: 'color 0.3s ease'}}>Home</button>
@@ -474,7 +475,7 @@ function App() {
       {/* Footer / Outro */}
       <footer>
         <div className="container">
-          <div className="footer-logo" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem'}}><img src="/logo.png" alt="The Phoenix" style={{height: '40px', mixBlendMode: 'lighten', filter: 'brightness(1.5) contrast(1.2)', objectFit: 'contain'}} /> The Phoenix</div>
+          <div className="footer-logo" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem'}}><img src={`${BASE}logo.png`} alt="The Phoenix" style={{height: '40px', mixBlendMode: 'lighten', filter: 'brightness(1.5) contrast(1.2)', objectFit: 'contain'}} /> The Phoenix</div>
           <div className="footer-contact">
             <p>Wyndham Yangon Hotel, Level 5</p>
             <p>invest@thephoenixyangon.com | +95 9 123 456 789</p>
@@ -971,7 +972,7 @@ function App() {
                 <h4 style={{color: 'var(--text-primary)', marginBottom: '1rem', fontSize: '1.3rem', fontFamily: 'var(--font-serif)', borderBottom: '1px solid rgba(212,175,55,0.2)', paddingBottom: '0.5rem'}}>Salads</h4>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/sa1.png" alt="Salad 1" />
+                    <img src={`${BASE}assets/sa1.png`} alt="Salad 1" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -983,7 +984,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/sa2.png" alt="Salad 2" />
+                    <img src={`${BASE}assets/sa2.png`} alt="Salad 2" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -995,7 +996,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/sa3.png" alt="Salad 3" />
+                    <img src={`${BASE}assets/sa3.png`} alt="Salad 3" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1007,7 +1008,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/sa4.png" alt="Salad 4" />
+                    <img src={`${BASE}assets/sa4.png`} alt="Salad 4" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1021,7 +1022,7 @@ function App() {
                 <h4 style={{color: 'var(--text-primary)', marginBottom: '1rem', marginTop: '2.5rem', fontSize: '1.3rem', fontFamily: 'var(--font-serif)', borderBottom: '1px solid rgba(212,175,55,0.2)', paddingBottom: '0.5rem'}}>Soups</h4>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/so1.png" alt="Soup 1" />
+                    <img src={`${BASE}assets/so1.png`} alt="Soup 1" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1033,7 +1034,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/so2.png" alt="Soup 2" />
+                    <img src={`${BASE}assets/so2.png`} alt="Soup 2" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1045,7 +1046,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/so3.png" alt="Soup 3" />
+                    <img src={`${BASE}assets/so3.png`} alt="Soup 3" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1057,7 +1058,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/so4.png" alt="Soup 4" />
+                    <img src={`${BASE}assets/so4.png`} alt="Soup 4" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1071,7 +1072,7 @@ function App() {
                 <h4 style={{color: 'var(--text-primary)', marginBottom: '1rem', marginTop: '2.5rem', fontSize: '1.3rem', fontFamily: 'var(--font-serif)', borderBottom: '1px solid rgba(212,175,55,0.2)', paddingBottom: '0.5rem'}}>Main Dishes</h4>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/md1.png" alt="Main Dish 1" />
+                    <img src={`${BASE}assets/md1.png`} alt="Main Dish 1" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1083,7 +1084,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/md2.png" alt="Main Dish 2" />
+                    <img src={`${BASE}assets/md2.png`} alt="Main Dish 2" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1095,7 +1096,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/md3.png" alt="Main Dish 3" />
+                    <img src={`${BASE}assets/md3.png`} alt="Main Dish 3" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1107,7 +1108,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/md4.png" alt="Main Dish 4" />
+                    <img src={`${BASE}assets/md4.png`} alt="Main Dish 4" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1119,7 +1120,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/md5.png" alt="Main Dish 5" />
+                    <img src={`${BASE}assets/md5.png`} alt="Main Dish 5" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1131,7 +1132,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/md6.png" alt="Main Dish 6" />
+                    <img src={`${BASE}assets/md6.png`} alt="Main Dish 6" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1148,7 +1149,7 @@ function App() {
                 <h4 style={{color: 'var(--text-primary)', marginBottom: '1rem', fontSize: '1.3rem', fontFamily: 'var(--font-serif)', borderBottom: '1px solid rgba(212,175,55,0.2)', paddingBottom: '0.5rem'}}>Desserts</h4>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/ds1.png" alt="Dessert 1" />
+                    <img src={`${BASE}assets/ds1.png`} alt="Dessert 1" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1161,7 +1162,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/ds2.png" alt="Dessert 2" />
+                    <img src={`${BASE}assets/ds2.png`} alt="Dessert 2" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1174,7 +1175,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/ds3.png" alt="Dessert 3" />
+                    <img src={`${BASE}assets/ds3.png`} alt="Dessert 3" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1187,7 +1188,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/ds4.png" alt="Dessert 4" />
+                    <img src={`${BASE}assets/ds4.png`} alt="Dessert 4" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1202,7 +1203,7 @@ function App() {
                 <h4 style={{color: 'var(--text-primary)', marginBottom: '1rem', marginTop: '2.5rem', fontSize: '1.3rem', fontFamily: 'var(--font-serif)', borderBottom: '1px solid rgba(212,175,55,0.2)', paddingBottom: '0.5rem'}}>Wines (By Bottle)</h4>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/win1.png" alt="Wine 1" />
+                    <img src={`${BASE}assets/win1.png`} alt="Wine 1" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1214,7 +1215,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/win2.png" alt="Wine 2" />
+                    <img src={`${BASE}assets/win2.png`} alt="Wine 2" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1226,7 +1227,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/win3.png" alt="Wine 3" />
+                    <img src={`${BASE}assets/win3.png`} alt="Wine 3" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1238,7 +1239,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/win4.png" alt="Wine 4" />
+                    <img src={`${BASE}assets/win4.png`} alt="Wine 4" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1250,7 +1251,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/win5.png" alt="Wine 5" />
+                    <img src={`${BASE}assets/win5.png`} alt="Wine 5" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1265,7 +1266,7 @@ function App() {
                 <h4 style={{color: 'var(--text-primary)', marginBottom: '1rem', marginTop: '2.5rem', fontSize: '1.3rem', fontFamily: 'var(--font-serif)', borderBottom: '1px solid rgba(212,175,55,0.2)', paddingBottom: '0.5rem'}}>The Artisan Tea & Coffee Selection</h4>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/bev1.png" alt="Specialty Coffee" />
+                    <img src={`${BASE}assets/bev1.png`} alt="Specialty Coffee" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1278,7 +1279,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/bev2.png" alt="Fine Teas" />
+                    <img src={`${BASE}assets/bev2.png`} alt="Fine Teas" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1291,7 +1292,7 @@ function App() {
                 </div>
                 <div className="menu-item">
                   <div className="menu-item-img-wrapper">
-                    <img src="/assets/bev3.png" alt="Signature Infusions" />
+                    <img src={`${BASE}assets/bev3.png`} alt="Signature Infusions" />
                   </div>
                   <div className="menu-item-content">
                     <div className="menu-item-header">
@@ -1318,7 +1319,7 @@ function App() {
                   <div style={{background: 'rgba(212,175,55,0.03)', borderRadius: '12px', border: '1px solid rgba(212,175,55,0.2)', padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease', cursor: 'pointer'}} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
                     <div style={{display: 'flex', justifyContent: 'center', marginBottom: '1.5rem'}}>
                       <div style={{width: '100px', height: '100px', borderRadius: '50%', overflow: 'hidden', border: '3px solid var(--gold-primary)', flexShrink: 0, boxShadow: '0 10px 20px rgba(0,0,0,0.5)'}}>
-                        <img src="/assets/md2.png" style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%', transform: 'scale(2.2)'}} alt="The Signature" />
+                        <img src={`${BASE}assets/md2.png`} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%', transform: 'scale(2.2)'}} alt="The Signature" />
                       </div>
                     </div>
                     <div style={{textAlign: 'center', marginBottom: '1.5rem'}}>
@@ -1354,7 +1355,7 @@ function App() {
                   <div style={{background: 'rgba(212,175,55,0.03)', borderRadius: '12px', border: '1px solid rgba(212,175,55,0.2)', padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease', cursor: 'pointer'}} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
                     <div style={{display: 'flex', justifyContent: 'center', marginBottom: '1.5rem'}}>
                       <div style={{width: '100px', height: '100px', borderRadius: '50%', overflow: 'hidden', border: '3px solid var(--gold-primary)', flexShrink: 0, boxShadow: '0 10px 20px rgba(0,0,0,0.5)'}}>
-                        <img src="/assets/md6.png" style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%', transform: 'scale(2.2)'}} alt="The Ocean" />
+                        <img src={`${BASE}assets/md6.png`} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%', transform: 'scale(2.2)'}} alt="The Ocean" />
                       </div>
                     </div>
                     <div style={{textAlign: 'center', marginBottom: '1.5rem'}}>
@@ -1390,7 +1391,7 @@ function App() {
                   <div style={{background: 'rgba(212,175,55,0.03)', borderRadius: '12px', border: '1px solid rgba(212,175,55,0.2)', padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease', cursor: 'pointer'}} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
                     <div style={{display: 'flex', justifyContent: 'center', marginBottom: '1.5rem'}}>
                       <div style={{width: '100px', height: '100px', borderRadius: '50%', overflow: 'hidden', border: '3px solid var(--gold-primary)', flexShrink: 0, boxShadow: '0 10px 20px rgba(0,0,0,0.5)'}}>
-                        <img src="/assets/md1.png" style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%', transform: 'scale(2.2)'}} alt="The Classic" />
+                        <img src={`${BASE}assets/md1.png`} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%', transform: 'scale(2.2)'}} alt="The Classic" />
                       </div>
                     </div>
                     <div style={{textAlign: 'center', marginBottom: '1.5rem'}}>
@@ -1426,7 +1427,7 @@ function App() {
                   <div style={{background: 'rgba(212,175,55,0.03)', borderRadius: '12px', border: '1px solid rgba(212,175,55,0.2)', padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease', cursor: 'pointer'}} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
                     <div style={{display: 'flex', justifyContent: 'center', marginBottom: '1.5rem'}}>
                       <div style={{width: '100px', height: '100px', borderRadius: '50%', overflow: 'hidden', border: '3px solid var(--gold-primary)', flexShrink: 0, boxShadow: '0 10px 20px rgba(0,0,0,0.5)'}}>
-                        <img src="/assets/md5.png" style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%', transform: 'scale(2.2)'}} alt="Earth & Flora" />
+                        <img src={`${BASE}assets/md5.png`} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%', transform: 'scale(2.2)'}} alt="Earth & Flora" />
                       </div>
                     </div>
                     <div style={{textAlign: 'center', marginBottom: '1.5rem'}}>
