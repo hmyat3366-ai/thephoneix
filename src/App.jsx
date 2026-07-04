@@ -1625,10 +1625,31 @@ function App() {
             </div>
           </div>
 
-          <div style={{background: 'linear-gradient(135deg, rgba(212,175,55,0.2) 0%, rgba(212,175,55,0.05) 100%)', border: '1px solid var(--gold-primary)', borderRadius: '12px', padding: '2rem', textAlign: 'center', maxWidth: '600px', margin: '0 auto'}}>
-            <div style={{color: 'var(--text-primary)', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '0.5rem'}}>Total Kitchen Assets Budget</div>
-            <div style={{fontFamily: 'var(--font-serif)', color: 'var(--gold-primary)', fontSize: '3.5rem', fontWeight: 'bold', textShadow: '0 2px 10px rgba(212,175,55,0.3)'}}>900 သိန်း</div>
-            <div style={{color: 'var(--text-secondary)', fontSize: '1rem', marginTop: '0.5rem'}}>High-Performance & Cost-Effective European Setup</div>
+          <div style={{
+            marginTop: '2rem',
+            padding: '2.5rem',
+            background: 'linear-gradient(135deg, rgba(212,175,55,0.15) 0%, rgba(212,175,55,0.05) 100%)',
+            border: '1px solid rgba(212,175,55,0.3)',
+            borderRadius: '12px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '2rem'
+          }}>
+            <div>
+              <h3 style={{color: 'var(--gold-primary)', fontFamily: 'var(--font-serif)', fontSize: '1.8rem', marginBottom: '0.5rem'}}>Total Kitchen Assets Budget</h3>
+              <p style={{color: 'var(--text-secondary)', margin: 0}}>High-Performance & Cost-Effective European Setup</p>
+            </div>
+            
+            <div style={{textAlign: 'right'}}>
+              <div style={{color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '0.5rem'}}>
+                MMK 900 Lakhs
+              </div>
+              <div style={{color: 'var(--gold-primary)', fontFamily: 'var(--font-serif)', fontSize: '3.5rem', lineHeight: '1'}}>
+                $22,500
+              </div>
+            </div>
           </div>
         </div>
       </section>
