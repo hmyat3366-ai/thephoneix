@@ -146,7 +146,7 @@ function App() {
     bohLayout: `${BASE}assets/BOH Hifi.png`,
     fohLayout: `${BASE}assets/FOH Hifi.png`,
     fullLayout: `${BASE}assets/Full.png`,
-    interiorLayout: `${BASE}assets/interior.png`,
+    interiorLayout: `${BASE}assets/interior.jpg`,
   };
 
   return (
