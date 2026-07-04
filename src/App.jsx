@@ -146,6 +146,7 @@ function App() {
     bohLayout: `${BASE}assets/BOH Hifi.png`,
     fohLayout: `${BASE}assets/FOH Hifi.png`,
     fullLayout: `${BASE}assets/Full.png`,
+    interiorLayout: `${BASE}assets/interior.png`,
   };
 
   return (
@@ -649,6 +650,13 @@ function App() {
               <div style={{borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(212,175,55,0.2)', cursor: 'pointer', transition: 'transform 0.3s ease'}} onClick={() => setSelectedImage(images.bohLayout)} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
                 <img src={images.bohLayout} alt="BOH Layout" style={{width: '100%', display: 'block'}} />
               </div>
+            </div>
+          </div>
+
+          <div style={{marginTop: '3rem'}}>
+            <h3 style={{color: 'var(--gold-primary)', marginBottom: '1rem', textAlign: 'center', fontFamily: 'var(--font-serif)', fontSize: '1.5rem'}}>Interior Layout Design</h3>
+            <div style={{borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(212,175,55,0.2)', cursor: 'pointer', transition: 'transform 0.3s ease'}} onClick={() => setSelectedImage(images.interiorLayout)} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+              <img src={images.interiorLayout} alt="Interior Layout" style={{width: '100%', display: 'block'}} />
             </div>
           </div>
 
