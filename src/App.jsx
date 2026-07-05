@@ -712,6 +712,55 @@ function App() {
             <p className="section-subtitle">Optimized organizational structure integrating Wyndham's existing infrastructure for maximum profitability.</p>
           </div>
 
+          {/* Org Chart */}
+          <div style={{margin: '1rem auto 4rem', maxWidth: '800px', padding: '0 1rem'}}>
+            <h3 style={{color: 'var(--gold-primary)', textAlign: 'center', marginBottom: '2.5rem', fontFamily: 'var(--font-serif)', fontSize: '1.8rem'}}>Organizational Structure</h3>
+            
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+              {/* Level 1 */}
+              <div style={{background: 'var(--bg-dark)', border: '1px solid rgba(212,175,55,0.5)', padding: '1rem 2.5rem', borderRadius: '8px', color: 'var(--gold-light)', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase', fontSize: '0.9rem', zIndex: 2}}>
+                Office Operation
+              </div>
+              <div style={{width: '2px', height: '2rem', background: 'var(--gold-primary)'}}></div>
+              
+              {/* Level 2 */}
+              <div style={{background: 'linear-gradient(135deg, rgba(212,175,55,0.2) 0%, rgba(212,175,55,0.05) 100%)', border: '1px solid var(--gold-primary)', padding: '1rem 2.5rem', borderRadius: '8px', color: '#fff', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase', fontSize: '1rem', zIndex: 2, boxShadow: '0 4px 15px rgba(212,175,55,0.2)'}}>
+                Restaurant Manager
+              </div>
+              <div style={{width: '2px', height: '2rem', background: 'var(--gold-primary)'}}></div>
+
+              {/* Connector */}
+              <div style={{width: '55%', maxWidth: '275px', height: '2px', background: 'var(--gold-primary)'}}></div>
+              
+              {/* Level 3 */}
+              <div style={{display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: '500px'}}>
+                {/* Left */}
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '45%'}}>
+                  <div style={{width: '2px', height: '2rem', background: 'var(--gold-primary)'}}></div>
+                  <div style={{background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.3)', padding: '0.8rem 1rem', borderRadius: '8px', color: 'var(--gold-light)', fontWeight: 'bold', width: '100%', textAlign: 'center'}}>
+                    Kitchen (BOH)
+                  </div>
+                  <div style={{width: '2px', height: '1.5rem', background: 'rgba(212,175,55,0.3)'}}></div>
+                  <div style={{background: 'var(--bg-dark)', border: '1px solid rgba(255,255,255,0.1)', padding: '0.8rem 1rem', borderRadius: '8px', color: '#eaeaea', width: '100%', textAlign: 'center', fontSize: '0.9rem'}}>
+                    Executive Chef
+                  </div>
+                </div>
+
+                {/* Right */}
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '45%'}}>
+                  <div style={{width: '2px', height: '2rem', background: 'var(--gold-primary)'}}></div>
+                  <div style={{background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.3)', padding: '0.8rem 1rem', borderRadius: '8px', color: 'var(--gold-light)', fontWeight: 'bold', width: '100%', textAlign: 'center'}}>
+                    Service (FOH)
+                  </div>
+                  <div style={{width: '2px', height: '1.5rem', background: 'rgba(212,175,55,0.3)'}}></div>
+                  <div style={{background: 'var(--bg-dark)', border: '1px solid rgba(255,255,255,0.1)', padding: '0.8rem 1rem', borderRadius: '8px', color: '#eaeaea', width: '100%', textAlign: 'center', fontSize: '0.9rem'}}>
+                    Head Waiter / Waitresses
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid-2" style={{marginBottom: '3rem'}}>
             <div className="strategy-box" style={{marginBottom: '0'}}>
               <h3 style={{color: 'var(--text-primary)', marginBottom: '1.5rem', fontFamily: 'var(--font-serif)'}}>The "Brain vs. Muscle" Strategy</h3>
