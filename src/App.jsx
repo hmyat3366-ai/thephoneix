@@ -784,7 +784,7 @@ function App() {
             </div>
           </div>
 
-          <div className="grid-2" style={{marginBottom: '3rem'}}>
+          <div className="grid-3" style={{marginBottom: '3rem'}}>
             <div className="strategy-box" style={{marginBottom: '0'}}>
               <h3 style={{color: 'var(--text-primary)', marginBottom: '1.5rem', fontFamily: 'var(--font-serif)'}}>The "Brain vs. Muscle" Strategy</h3>
               <h4>1. Strategic Investment in Leadership</h4>
@@ -807,6 +807,18 @@ function App() {
               
               <h4>3. Skill & Quality Assurance (Pre-vetted)</h4>
               <p>To ensure shared staff meet luxury standards, our Core Leaders act as Quality Gatekeepers. We only utilize Wyndham's pre-vetted talent, who undergo rigorous fine-dining cross-training by our Executive Chef and Manager before deployment.</p>
+            </div>
+
+            <div className="strategy-box" style={{marginBottom: '0', background: 'linear-gradient(135deg, rgba(212,175,55,0.08) 0%, rgba(0,0,0,0.5) 100%)', border: '1px solid rgba(212,175,55,0.4)'}}>
+              <h3 style={{color: 'var(--gold-primary)', marginBottom: '1.5rem', fontFamily: 'var(--font-serif)'}}>Infrastructure Synergy (Zero Overhead)</h3>
+              <h4 style={{color: '#fff'}}>1. Master Infrastructure Integration</h4>
+              <p>Traditional fine dining restaurants suffer from massive fixed costs like Rent, Land Tax, and Utility Bills (Electricity, Water). Operating within the Wyndham Hotel ecosystem entirely bypasses these standalone overheads.</p>
+              
+              <h4 style={{color: '#fff'}}>2. Profit-Sharing Model</h4>
+              <p>Instead of monthly fixed leases and fluctuating electric bills, utilities are absorbed into the hotel's master meter system. In exchange, the hotel enters a profit-sharing synergy with us, turning fixed liabilities into performance-based variables.</p>
+              
+              <h4 style={{color: '#fff'}}>3. Accelerated ROI</h4>
+              <p>By removing heavy real estate and utility overheads from our P&L, our break-even point is drastically lowered, allowing investors to see returns significantly faster than a traditional restaurant venture.</p>
             </div>
           </div>
 
