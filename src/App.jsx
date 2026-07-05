@@ -1738,6 +1738,70 @@ function App() {
         </div>
       </section>
 
+      {/* FOH Assets: Table & Glassware */}
+      <section className="section" style={{backgroundColor: 'var(--bg-dark)'}}>
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">FOH Assets: Table & Glassware Synergy</h2>
+            <p className="section-subtitle">A hyper-efficient approach to Front of House assets by leveraging Wyndham Hotel's existing inventory.</p>
+          </div>
+
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '3rem'}}>
+            <div style={{background: 'linear-gradient(135deg, rgba(212,175,55,0.1) 0%, rgba(0,0,0,0) 100%)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(212,175,55,0.3)'}}>
+              <h3 style={{color: 'var(--gold-primary)', marginBottom: '1rem', fontFamily: 'var(--font-serif)'}}>The Synergy Advantage</h3>
+              <p style={{color: 'var(--text-secondary)', lineHeight: 1.6}}>
+                Instead of buying every single chair, table, and water glass from scratch, we tap into Wyndham Hotel's massive existing banquet and restaurant inventory for standard items. Our dedicated budget is strictly used to purchase <strong style={{color: '#fff'}}>Premium Signature Accents</strong> that elevate the dining experience to a Michelin-star level.
+              </p>
+            </div>
+
+            <div style={{background: 'linear-gradient(135deg, rgba(212,175,55,0.1) 0%, rgba(0,0,0,0) 100%)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(212,175,55,0.3)'}}>
+              <h3 style={{color: 'var(--gold-primary)', marginBottom: '1rem', fontFamily: 'var(--font-serif)'}}>What We Share (Zero Cost)</h3>
+              <ul style={{color: 'var(--text-secondary)', lineHeight: 1.6, paddingLeft: '1.2rem'}}>
+                <li>Standard Dining Tables & Banquet Chairs</li>
+                <li>Base Table Linens & Napkins</li>
+                <li>Standard Water Glasses & Basic Cutlery</li>
+                <li>Tray stands and service carts</li>
+              </ul>
+            </div>
+
+            <div style={{background: 'linear-gradient(135deg, rgba(212,175,55,0.1) 0%, rgba(0,0,0,0) 100%)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(212,175,55,0.3)'}}>
+              <h3 style={{color: 'var(--gold-primary)', marginBottom: '1rem', fontFamily: 'var(--font-serif)'}}>What We Buy (150 သိန်း)</h3>
+              <ul style={{color: 'var(--text-secondary)', lineHeight: 1.6, paddingLeft: '1.2rem'}}>
+                <li><strong style={{color: '#fff'}}>Premium Glassware:</strong> Riedel/Spiegelau Crystal Wine Glasses</li>
+                <li><strong style={{color: '#fff'}}>Custom Show-Plates:</strong> Hand-crafted ceramic plating for Signature Dishes</li>
+                <li><strong style={{color: '#fff'}}>Luxury Accents:</strong> Gold/Silver polished steak knives and ambient table lamps</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style={{
+            padding: '2.5rem',
+            background: 'linear-gradient(135deg, rgba(212,175,55,0.15) 0%, rgba(212,175,55,0.05) 100%)',
+            border: '1px solid rgba(212,175,55,0.3)',
+            borderRadius: '12px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '2rem'
+          }}>
+            <div>
+              <h3 style={{color: 'var(--gold-primary)', fontFamily: 'var(--font-serif)', fontSize: '1.8rem', marginBottom: '0.5rem'}}>Total FOH Assets Budget</h3>
+              <p style={{color: 'var(--text-secondary)', margin: 0}}>Premium Glassware & Table Accents Only</p>
+            </div>
+            
+            <div style={{textAlign: 'right'}}>
+              <div style={{color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '0.5rem'}}>
+                MMK 150 Lakhs
+              </div>
+              <div style={{color: 'var(--gold-primary)', fontFamily: 'var(--font-serif)', fontSize: '3.5rem', lineHeight: '1'}}>
+                $3,750
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Financials & Investment Breakdown */}
       <section id="financials" className="section">
         <div className="container">
@@ -1754,11 +1818,12 @@ function App() {
               <div style={{display: 'flex', height: '35px', borderRadius: '20px', overflow: 'hidden', marginBottom: '3rem', boxShadow: '0 4px 15px rgba(0,0,0,0.5)'}}>
                 <div style={{width: '63.75%', background: '#d4af37', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Layout & Construction">63.75%</div>
                 <div style={{width: '22.5%', background: '#b78846', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Kitchen Assets">22.5%</div>
-                <div style={{width: '6.25%', background: '#e6c875', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Core Leadership (3 Months)">6.25%</div>
-                <div style={{width: '7.5%', background: '#f5e4ab', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Working Capital & Buffer">7.5%</div>
+                <div style={{width: '6.25%', background: '#e6c875', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Core Leadership">6.25%</div>
+                <div style={{width: '3.75%', background: '#dca468', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Table & Glassware">3.75%</div>
+                <div style={{width: '3.75%', background: '#f5e4ab', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Working Capital">3.75%</div>
               </div>
 
-              <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem'}}>
+              <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem'}}>
                 <div style={{borderLeft: '4px solid #d4af37', paddingLeft: '1.2rem'}}>
                   <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Layout & Construction Budget</div>
                   <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>2,550 သိန်း</div>
@@ -1771,9 +1836,13 @@ function App() {
                   <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Core Leadership (3 Months)</div>
                   <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>250 သိန်း</div>
                 </div>
+                <div style={{borderLeft: '4px solid #dca468', paddingLeft: '1.2rem'}}>
+                  <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Table & Glassware (FOH)</div>
+                  <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>150 သိန်း</div>
+                </div>
                 <div style={{borderLeft: '4px solid #f5e4ab', paddingLeft: '1.2rem'}}>
                   <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Working Capital & Buffer</div>
-                  <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>300 သိန်း</div>
+                  <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>150 သိန်း</div>
                 </div>
               </div>
             </div>
