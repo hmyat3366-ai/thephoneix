@@ -1668,28 +1668,28 @@ function App() {
               <h3 style={{color: 'var(--gold-primary)', fontFamily: 'var(--font-serif)', marginBottom: '2rem', textAlign: 'center', fontSize: '1.6rem'}}>Capital Allocation Breakdown</h3>
               
               <div style={{display: 'flex', height: '35px', borderRadius: '20px', overflow: 'hidden', marginBottom: '3rem', boxShadow: '0 4px 15px rgba(0,0,0,0.5)'}}>
-                <div style={{width: '22.5%', background: '#b78846', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Kitchen CAPEX">22.5%</div>
-                <div style={{width: '45%', background: '#d4af37', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Interior & FOH">45.0%</div>
-                <div style={{width: '12.5%', background: '#e6c875', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Pre-opening & Licensing">12.5%</div>
-                <div style={{width: '20%', background: '#f5e4ab', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Working Capital">20.0%</div>
+                <div style={{width: '63.75%', background: '#d4af37', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Layout & Construction">63.75%</div>
+                <div style={{width: '22.5%', background: '#b78846', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Kitchen Assets">22.5%</div>
+                <div style={{width: '6.25%', background: '#e6c875', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Core Leadership (3 Months)">6.25%</div>
+                <div style={{width: '7.5%', background: '#f5e4ab', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontSize: '0.85rem', fontWeight: 'bold'}} title="Working Capital & Buffer">7.5%</div>
               </div>
 
               <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem'}}>
+                <div style={{borderLeft: '4px solid #d4af37', paddingLeft: '1.2rem'}}>
+                  <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Layout & Construction Budget</div>
+                  <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>2,550 သိန်း</div>
+                </div>
                 <div style={{borderLeft: '4px solid #b78846', paddingLeft: '1.2rem'}}>
-                  <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Kitchen & BOH CAPEX</div>
+                  <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Total Kitchen Assets Budget</div>
                   <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>900 သိန်း</div>
                 </div>
-                <div style={{borderLeft: '4px solid #d4af37', paddingLeft: '1.2rem'}}>
-                  <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Interior & FOH Build-out</div>
-                  <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>1,800 သိန်း</div>
-                </div>
                 <div style={{borderLeft: '4px solid #e6c875', paddingLeft: '1.2rem'}}>
-                  <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Pre-opening & Licensing</div>
-                  <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>500 သိန်း</div>
+                  <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Core Leadership (3 Months)</div>
+                  <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>250 သိန်း</div>
                 </div>
                 <div style={{borderLeft: '4px solid #f5e4ab', paddingLeft: '1.2rem'}}>
-                  <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Working Capital</div>
-                  <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>800 သိန်း</div>
+                  <div style={{color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '0.3rem'}}>Working Capital & Buffer</div>
+                  <div style={{color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: 'bold'}}>300 သိန်း</div>
                 </div>
               </div>
             </div>
