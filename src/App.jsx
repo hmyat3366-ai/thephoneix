@@ -730,13 +730,13 @@ function App() {
               <div style={{width: '2px', height: '2rem', background: 'var(--gold-primary)'}}></div>
 
               {/* Connector */}
-              <div style={{width: '78%', height: '2px', background: 'var(--gold-primary)'}}></div>
+              <div style={{width: '70%', height: '2px', background: 'var(--gold-primary)'}}></div>
               
               {/* Level 3 */}
               <div style={{display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'flex-start'}}>
                 
                 {/* 1. Kitchen */}
-                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22%'}}>
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '30%'}}>
                   <div style={{width: '2px', height: '2rem', background: 'var(--gold-primary)'}}></div>
                   <div style={{background: 'rgba(212,175,55,0.15)', border: '1px solid rgba(212,175,55,0.4)', padding: '0.8rem 0.5rem', borderRadius: '8px', color: 'var(--gold-light)', fontWeight: 'bold', width: '100%', textAlign: 'center', marginBottom: '1rem', textTransform: 'uppercase'}}>
                     Kitchen (BOH)
@@ -750,38 +750,23 @@ function App() {
                   </div>
                 </div>
 
-                {/* 2. Service */}
-                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22%'}}>
+                {/* 2. Service & Bar */}
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '30%'}}>
                   <div style={{width: '2px', height: '2rem', background: 'var(--gold-primary)'}}></div>
                   <div style={{background: 'rgba(212,175,55,0.15)', border: '1px solid rgba(212,175,55,0.4)', padding: '0.8rem 0.5rem', borderRadius: '8px', color: 'var(--gold-light)', fontWeight: 'bold', width: '100%', textAlign: 'center', marginBottom: '1rem', textTransform: 'uppercase'}}>
-                    Service (FOH)
+                    Service & Bar (FOH)
                   </div>
                   <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%'}}>
-                    {['Head Waiters', 'Waiters / Waitresses', 'Hostess / Greeter', 'Sommelier', 'Food Runners & Bussers'].map((role, i) => (
-                      <div key={i} style={{background: i===0 ? 'var(--bg-dark)' : 'transparent', border: i===0 ? '1px solid rgba(255,255,255,0.2)' : 'none', padding: '0.5rem', borderRadius: '6px', color: i===0 ? '#fff' : 'var(--text-secondary)', textAlign: 'center', fontSize: '0.85rem', fontWeight: i===0 ? 'bold' : 'normal'}}>
+                    {['Head Waiters', 'Waiters / Waitresses', 'Hostess / Greeter', 'Sommelier', 'Food Runners & Bussers', 'Head Mixologist', 'Bartender'].map((role, i) => (
+                      <div key={i} style={{background: (i===0 || i===5) ? 'var(--bg-dark)' : 'transparent', border: (i===0 || i===5) ? '1px solid rgba(255,255,255,0.2)' : 'none', padding: '0.5rem', borderRadius: '6px', color: (i===0 || i===5) ? '#fff' : 'var(--text-secondary)', textAlign: 'center', fontSize: '0.85rem', fontWeight: (i===0 || i===5) ? 'bold' : 'normal'}}>
                         {role}
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* 3. Bar */}
-                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22%'}}>
-                  <div style={{width: '2px', height: '2rem', background: 'var(--gold-primary)'}}></div>
-                  <div style={{background: 'rgba(212,175,55,0.15)', border: '1px solid rgba(212,175,55,0.4)', padding: '0.8rem 0.5rem', borderRadius: '8px', color: 'var(--gold-light)', fontWeight: 'bold', width: '100%', textAlign: 'center', marginBottom: '1rem', textTransform: 'uppercase'}}>
-                    Bar
-                  </div>
-                  <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%'}}>
-                    {['Head Mixologist', 'Bartender'].map((role, i) => (
-                      <div key={i} style={{background: i===0 ? 'var(--bg-dark)' : 'transparent', border: i===0 ? '1px solid rgba(255,255,255,0.2)' : 'none', padding: '0.5rem', borderRadius: '6px', color: i===0 ? '#fff' : 'var(--text-secondary)', textAlign: 'center', fontSize: '0.85rem', fontWeight: i===0 ? 'bold' : 'normal'}}>
-                        {role}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* 4. Admin */}
-                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22%'}}>
+                {/* 3. Admin */}
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '30%'}}>
                   <div style={{width: '2px', height: '2rem', background: 'var(--gold-primary)'}}></div>
                   <div style={{background: 'rgba(212,175,55,0.15)', border: '1px solid rgba(212,175,55,0.4)', padding: '0.8rem 0.5rem', borderRadius: '8px', color: 'var(--gold-light)', fontWeight: 'bold', width: '100%', textAlign: 'center', marginBottom: '1rem', textTransform: 'uppercase'}}>
                     Front Desk & Admin
