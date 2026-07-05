@@ -622,6 +622,36 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Tech & Operations */}
+      <section className="section" style={{padding: '2rem 0', borderBottom: '1px solid rgba(212,175,55,0.2)', marginBottom: '2rem'}}>
+        <div className="section-header" style={{marginBottom: '2rem'}}>
+          <h2 className="section-title" style={{fontSize: '2rem'}}>Tech & Operations</h2>
+          <p className="section-subtitle">Modernizing the fine-dining experience with seamless technology.</p>
+        </div>
+        
+        <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
+          <div style={{background: 'var(--bg-lighter)', padding: '1.5rem', borderRadius: '12px', border: '1px solid rgba(212,175,55,0.1)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start'}}>
+            <div style={{background: 'rgba(212,175,55,0.1)', padding: '1rem', borderRadius: '50%', color: 'var(--gold-primary)'}}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
+            <div>
+              <h3 style={{color: 'var(--gold-primary)', marginBottom: '0.5rem', fontSize: '1.2rem', fontFamily: 'var(--font-serif)'}}>Digital Menu & Contactless Experience</h3>
+              <p style={{color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6'}}>For guests who prefer a highly visual or highly private ordering experience, we provide interactive iPad menus and QR-based digital menus. This allows guests to explore our Set Menus, view high-definition images of the dishes, and read detailed ingredient sourcing stories without requiring constant waiter interaction.</p>
+            </div>
+          </div>
+          
+          <div style={{background: 'var(--bg-lighter)', padding: '1.5rem', borderRadius: '12px', border: '1px solid rgba(212,175,55,0.1)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start'}}>
+            <div style={{background: 'rgba(212,175,55,0.1)', padding: '1rem', borderRadius: '50%', color: 'var(--gold-primary)'}}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div>
+              <h3 style={{color: 'var(--gold-primary)', marginBottom: '0.5rem', fontSize: '1.2rem', fontFamily: 'var(--font-serif)'}}>Integrated POS & KOT System</h3>
+              <p style={{color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6'}}>All digital orders are synced instantly to the Kitchen Order Ticket (KOT) system, ensuring complete accuracy and speed. We integrate seamlessly with Wyndham’s central PMS system so that hotel guests can simply charge the meal to their room.</p>
+            </div>
+          </div>
+        </div>
+      </section>
                 
       {/* Architectural Layout */}
       <section className="section">
